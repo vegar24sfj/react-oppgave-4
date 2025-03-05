@@ -12,7 +12,7 @@ const SearchContainer = styled.div`
 const Title = styled.h1`
   font-size: 2rem;
   font-weight: bold;
-  color: #333;
+  color: white; /* Change the color to white */
   margin-bottom: 20px;
 `;
 
@@ -22,25 +22,19 @@ const ResultsContainer = styled.div`
   max-width: 600px;
 `;
 
-const ResultsTitle = styled.h2`
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-`;
-
 const ResultsList = styled.ul`
   list-style-type: none;
   padding: 0;
 `;
 
 const ResultItem = styled.li`
-  padding: 10px;
-  background-color: #f9f9f9;
+  padding: 0px;
+  /* background-color: #f9f9f9; */
   margin-bottom: 10px;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  /* border-radius: 5px; */
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); */
   &:hover {
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
   }
 `;
 
@@ -51,8 +45,10 @@ const ErrorMessage = styled.p`
 
 const BookTitle = styled.h3`
   font-size: 18px;
-  color: #007bff;
+  color: #61dafb; /* Change text color to #61dafb */
   text-decoration: none;
+  margin: 0; /* Remove margin around the h3 */
+  background-color: transparent; /* Ensure no background */
 `;
 
 const FavoritesPage = () => {
@@ -67,7 +63,6 @@ const FavoritesPage = () => {
     <SearchContainer>
       <Title>Favorites</Title>
       <ResultsContainer>
-        <ResultsTitle>Results</ResultsTitle>
         <ResultsList>
           {favorites.length > 0 ? (
             favorites.map((book) => (

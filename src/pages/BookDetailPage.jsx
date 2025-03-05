@@ -11,6 +11,7 @@ const Container = styled.div`
 const Title = styled.h2`
   font-size: 24px;
   margin-bottom: 10px;
+  color: white; /* Set text color to white */
 `;
 
 const Image = styled.img`
@@ -22,7 +23,7 @@ const Image = styled.img`
 
 const Info = styled.p`
   font-size: 16px;
-  color: #555;
+  color: white; /* Set text color to white */
 `;
 
 const ReadLink = styled.a`

@@ -5,7 +5,7 @@ import styled from "styled-components";
 // Styled-components for the header
 const HeaderContainer = styled.header`
   background-color: #282c34;
-  padding: 0.5rem 5rem; /* Reduced padding for header height */
+  padding: 1rem 5rem; /* Reduced padding for header height */
   position: fixed;
   top: 0;
   left: 0;
@@ -71,7 +71,8 @@ const BurgerMenu = styled.div`
     color: white;
     position: absolute;
     right: 1rem; /* Adjust position */
-    top: 1rem; /* Ensure it doesn't overlap with other elements */
+    top: 50%; /* Center the burger icon vertically */
+    transform: translateY(-50%); /* Fine-tune to center vertically */
   }
 `;
 
@@ -106,8 +107,14 @@ const Menu = styled.ul`
 const Title = styled.h1`
   color: white;
   font-size: 1.5rem;
-  margin-right: 80px; /* Added margin to the right of the title */
-  white-space: nowrap; /* Prevent text from wrapping */
+  margin-right: 80px;
+  white-space: nowrap;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem; /* Adjust font size for mobile, make it smaller */
+    text-align: center; /* Optional: center text for mobile */
+    margin-right: 0; /* Optional: reset margin on mobile */
+  }
 `;
 
 const Header = () => {
