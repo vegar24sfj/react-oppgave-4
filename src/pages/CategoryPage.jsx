@@ -39,7 +39,7 @@ const BookTitle = styled.h3`
   color: #61dafb;
   text-decoration: none;
   text-align: center; /* Center the book title */
-  
+
   &:hover {
     text-decoration: underline; /* Add underline on hover */
   }

@@ -8,7 +8,7 @@ import styled from "styled-components";
 
 // Styled-components for the content area
 const MainContent = styled.div`
-  margin-top: 60px;  /* Make sure this matches the height of the header */
+  margin-top: 60px; /* Make sure this matches the height of the header */
   padding: 20px;
   width: 100%;
   min-height: 100vh; /* Ensures the content fills the page */
