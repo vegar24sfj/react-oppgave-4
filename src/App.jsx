@@ -4,6 +4,15 @@ import CategoryPage from "./pages/CategoryPage";
 import BookDetailPage from "./pages/BookDetailPage";
 import FavoritesPage from "./pages/FavoritesPage";
 import Header from "./components/Header";
+import styled from "styled-components";
+
+// Styled-components for the content area
+const MainContent = styled.div`
+  margin-top: 60px;  /* Make sure this matches the height of the header */
+  padding: 20px;
+  width: 100%;
+  min-height: 100vh; /* Ensures the content fills the page */
+`;
 
 const App = () => {
   return (
@@ -14,7 +23,9 @@ const App = () => {
           element={
             <>
               <Header />
-              <SearchPage />
+              <MainContent>
+                <SearchPage />
+              </MainContent>
             </>
           }
         />
@@ -23,7 +34,9 @@ const App = () => {
           element={
             <>
               <Header />
-              <CategoryPage />
+              <MainContent>
+                <CategoryPage />
+              </MainContent>
             </>
           }
         />
@@ -32,7 +45,9 @@ const App = () => {
           element={
             <>
               <Header />
-              <BookDetailPage />
+              <MainContent>
+                <BookDetailPage />
+              </MainContent>
             </>
           }
         />
@@ -41,7 +56,9 @@ const App = () => {
           element={
             <>
               <Header />
-              <FavoritesPage />
+              <MainContent>
+                <FavoritesPage />
+              </MainContent>
             </>
           }
         />
