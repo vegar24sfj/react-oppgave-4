@@ -175,7 +175,7 @@ Please change the parent <Route path="${q}"> to <Route path="${q==="/"?"*":`${q}
   color: #61dafb;
   text-decoration: none;
   text-align: center; /* Center the book title */
-  
+
   &:hover {
     text-decoration: underline; /* Add underline on hover */
   }
@@ -371,7 +371,7 @@ Please change the parent <Route path="${q}"> to <Route path="${q==="/"?"*":`${q}
     margin-right: 0; /* Optional: reset margin on mobile */
   }
 `,Ii=()=>{const[a,i]=M.useState(!1),s=M.useRef(null),c=()=>{i(d=>!d)};M.useEffect(()=>{const d=h=>{s.current&&!s.current.contains(h.target)&&i(!1)};return document.addEventListener("mousedown",d),()=>{document.removeEventListener("mousedown",d)}},[]);const o=()=>{window.innerWidth<=768&&i(!1)};return L.jsxs(jE,{children:[L.jsx(qE,{children:"React oppgave 4"})," ",L.jsx(BE,{onClick:c,children:"☰"}),L.jsx(HE,{children:L.jsxs(LE,{ref:s,isOpen:a,children:[L.jsx(se,{children:L.jsx(oe,{to:"/",onClick:o,children:"Home"})}),L.jsx(se,{children:L.jsx(oe,{to:"/category/fiction",onClick:o,children:"Fiction"})}),L.jsx(se,{children:L.jsx(oe,{to:"/category/mystery",onClick:o,children:"Mystery"})}),L.jsx(se,{children:L.jsx(oe,{to:"/category/thriller",onClick:o,children:"Thriller"})}),L.jsx(se,{children:L.jsx(oe,{to:"/category/romance",onClick:o,children:"Romance"})}),L.jsx(se,{children:L.jsx(oe,{to:"/category/fantasy",onClick:o,children:"Fantasy"})}),L.jsx(se,{children:L.jsx(oe,{to:"/category/morality",onClick:o,children:"Morality"})}),L.jsx(se,{children:L.jsx(oe,{to:"/category/society",onClick:o,children:"Society"})}),L.jsx(se,{children:L.jsx(oe,{to:"/category/power",onClick:o,children:"Power"})}),L.jsx(se,{children:L.jsx(oe,{to:"/category/justice",onClick:o,children:"Justice"})}),L.jsx(se,{children:L.jsx(oe,{to:"/category/adventure",onClick:o,children:"Adventure"})}),L.jsx(se,{children:L.jsx(oe,{to:"/category/tragedy",onClick:o,children:"Tragedy"})}),L.jsx(se,{children:L.jsx(oe,{to:"/category/war",onClick:o,children:"War"})}),L.jsx(se,{children:L.jsx(oe,{to:"/category/philosophy",onClick:o,children:"Philosophy"})}),L.jsx(se,{children:L.jsx(oe,{to:"/favorites",onClick:o,children:"Favorites"})})]})})]})},tr=ot.div`
-  margin-top: 60px;  /* Make sure this matches the height of the header */
+  margin-top: 60px; /* Make sure this matches the height of the header */
   padding: 20px;
   width: 100%;
   min-height: 100vh; /* Ensures the content fills the page */
