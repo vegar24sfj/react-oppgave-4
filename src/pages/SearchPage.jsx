@@ -117,7 +117,7 @@ const StyledLink = styled(Link)`
 `;
 
 const SearchPage = () => {
-  const [query, setQuery] = useState(''); // Unified query state for both title and author search
+  const [query, setQuery] = useState(""); // Unified query state for both title and author search
   const [searchType, setSearchType] = useState("title"); // Type of search, either title or author
   const [results, setResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -135,12 +135,16 @@ const SearchPage = () => {
       const data = await searchBooks(query, 1, "popular", "", searchType); // Search by the selected type
       if (searchType === "title") {
         // Filter the results for title search
-        const titleResults = data.results.filter(book => book.title.toLowerCase().includes(query.toLowerCase()));
+        const titleResults = data.results.filter((book) =>
+          book.title.toLowerCase().includes(query.toLowerCase())
+        );
         setResults(titleResults);
       } else if (searchType === "author") {
         // Filter the results for author search
-        const authorResults = data.results.filter(book =>
-          book.authors.some(author => author.name.toLowerCase().includes(query.toLowerCase()))
+        const authorResults = data.results.filter((book) =>
+          book.authors.some((author) =>
+            author.name.toLowerCase().includes(query.toLowerCase())
+          )
         );
         setResults(authorResults);
       }
@@ -160,12 +164,18 @@ const SearchPage = () => {
       <div>
         <SearchInput
           type="text"
-          placeholder={`Search by ${searchType.charAt(0).toUpperCase() + searchType.slice(1)}`}
+          placeholder={`Search by ${
+            searchType.charAt(0).toUpperCase() + searchType.slice(1)
+          }`}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
         <SearchButton onClick={handleSearch} disabled={isLoading}>
-          {isLoading ? 'Searching...' : `Search by ${searchType.charAt(0).toUpperCase() + searchType.slice(1)}`}
+          {isLoading
+            ? "Searching..."
+            : `Search by ${
+                searchType.charAt(0).toUpperCase() + searchType.slice(1)
+              }`}
         </SearchButton>
       </div>
 
@@ -190,9 +200,7 @@ const SearchPage = () => {
             results.map((book) => (
               <ResultItem key={book.id}>
                 <strong>
-                  <StyledLink to={`/book/${book.id}`}>
-                    {book.title}
-                  </StyledLink>
+                  <StyledLink to={`/book/${book.id}`}>{book.title}</StyledLink>
                 </strong>
                 by {book.authors.map((author) => author.name).join(", ")}
               </ResultItem>
